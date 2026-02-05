@@ -1,0 +1,49 @@
+{
+  "name": "photo-album",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc && npm run build:css && npm run copy-public",
+    "build:css": "postcss src/styles/tailwind.css -o dist/styles/tailwind.css",
+    "copy-public": "copyfiles -u 1 public/**/* dist/public",
+    "start": "ts-node src/app.ts",
+    "start:prod": "node dist/app.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'npm run build && node dist/app.js'",
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:fix": "eslint 'src/**/*.ts' --fix",
+    "format": "prettier --write 'src/**/*.{ts,json}'",
+    "format:check": "prettier --check 'src/**/*.{ts,json}'",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "autoprefixer": "^10.4.19",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "nodemon": "^3.1.9",
+    "postcss": "^8.4.39",
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.8.1",
+    "tailwindcss": "^3.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "express": "^4.22.1"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.json": [
+      "prettier --write"
+    ]
+  }
+}
