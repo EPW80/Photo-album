@@ -1,5 +1,6 @@
 import express from 'express';
 import { photoRoutes } from './routes/photoRoutes';
+import { errorHandler } from './middleware/errorHandler';
 import path from 'path';
 
 // Validate environment variables
@@ -32,4 +33,14 @@ app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-app.listen(port);
+// Error handling middleware (must be last)
+app.use(errorHandler);
+
+// Only start the server if this file is run directly
+if (require.main === module) {
+  app.listen(port, () => {
+    // Server started (logging will be added in Phase 6)
+  });
+}
+
+export default app;

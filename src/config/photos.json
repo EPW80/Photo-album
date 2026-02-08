@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "url": "/images/maga.png",
+    "title": "MAGA",
+    "description": "Make America Great Again",
+    "dateAdded": "2024-01-01"
+  },
+  {
+    "id": 2,
+    "url": "/images/fist.png",
+    "title": "Fist",
+    "description": "Raised fist",
+    "dateAdded": "2024-01-02"
+  },
+  {
+    "id": 3,
+    "url": "/images/calvary.png",
+    "title": "Calvary",
+    "description": "Calvary scene",
+    "dateAdded": "2024-01-03"
+  },
+  {
+    "id": 4,
+    "url": "/images/liberty.png",
+    "title": "Liberty",
+    "description": "Liberty statue",
+    "dateAdded": "2024-01-04"
+  },
+  {
+    "id": 5,
+    "url": "/images/trumpgif.gif",
+    "title": "Trump GIF",
+    "description": "Animated Trump",
+    "dateAdded": "2024-01-05"
+  },
+  {
+    "id": 6,
+    "url": "/images/cowboy.png",
+    "title": "Cowboy",
+    "description": "Cowboy style",
+    "dateAdded": "2024-01-06"
+  },
+  {
+    "id": 7,
+    "url": "/images/sam.gif",
+    "title": "Uncle Sam",
+    "description": "Uncle Sam GIF",
+    "dateAdded": "2024-01-07"
+  },
+  {
+    "id": 8,
+    "url": "/images/trumptower.png",
+    "title": "Trump Tower",
+    "description": "Trump Tower building",
+    "dateAdded": "2024-01-08"
+  },
+  {
+    "id": 9,
+    "url": "/images/champ.png",
+    "title": "Champ",
+    "description": "Champion pose",
+    "dateAdded": "2024-01-09"
+  },
+  {
+    "id": 10,
+    "url": "/images/getUp.png",
+    "title": "Get Up",
+    "description": "Motivational",
+    "dateAdded": "2024-01-10"
+  },
+  {
+    "id": 11,
+    "url": "/images/world.png",
+    "title": "World",
+    "description": "Global view",
+    "dateAdded": "2024-01-11"
+  },
+  {
+    "id": 12,
+    "url": "/images/naut.png",
+    "title": "Astronaut",
+    "description": "Space theme",
+    "dateAdded": "2024-01-12"
+  },
+  {
+    "id": 13,
+    "url": "/images/globe.png",
+    "title": "Globe",
+    "description": "Earth globe",
+    "dateAdded": "2024-01-13"
+  },
+  {
+    "id": 14,
+    "url": "/images/granite.png",
+    "title": "Granite",
+    "description": "Mt. Rushmore style",
+    "dateAdded": "2024-01-14"
+  },
+  {
+    "id": 15,
+    "url": "/images/bluejean.png",
+    "title": "Blue Jean",
+    "description": "Casual style",
+    "dateAdded": "2024-01-15"
+  },
+  {
+    "id": 16,
+    "url": "/images/philly.png",
+    "title": "Philadelphia",
+    "description": "Philadelphia scene",
+    "dateAdded": "2024-01-16"
+  },
+  {
+    "id": 17,
+    "url": "/images/moon.png",
+    "title": "Moon",
+    "description": "Moon landing",
+    "dateAdded": "2024-01-17"
+  },
+  {
+    "id": 18,
+    "url": "/images/wailing.png",
+    "title": "Wailing Wall",
+    "description": "Wailing Wall visit",
+    "dateAdded": "2024-01-18"
+  }
+]

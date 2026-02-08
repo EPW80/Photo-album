@@ -1,21 +1,32 @@
 import { PhotoController } from '../controllers/photoController';
-import { Application, Request, Response } from 'express';
+import { Application } from 'express';
+import { validatePhotoId } from '../middleware/validation';
+import { asyncHandler } from '../middleware/errorHandler';
 
 const photoController = new PhotoController();
 
-export const photoRoutes = (app: Application) => {
-  app.get('/photos', (_req: Request, res: Response) => {
-    const photos = photoController.getPhotos();
-    res.json(photos); // Send JSON response
-  });
+export const photoRoutes = (app: Application): void => {
+  /**
+   * GET /photos
+   * Get all photos
+   */
+  app.get(
+    '/photos',
+    asyncHandler(async (req, res) => {
+      await Promise.resolve(photoController.getPhotos(req, res));
+    })
+  );
 
-  app.get('/photo/:id', (req: Request, res: Response) => {
-    const id = parseInt(req.params.id, 10);
-    const photoResponse = photoController.getPhoto(id);
-    if ('error' in photoResponse) {
-      res.status(404).json(photoResponse);
-    } else {
-      res.json(photoResponse); // Send JSON response
-    }
-  });
+  /**
+   * GET /photo/:id
+   * Get a single photo by ID
+   * Validates photo ID before processing
+   */
+  app.get(
+    '/photo/:id',
+    validatePhotoId,
+    asyncHandler(async (req, res) => {
+      await Promise.resolve(photoController.getPhoto(req, res));
+    })
+  );
 };
