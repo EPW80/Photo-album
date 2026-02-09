@@ -20,15 +20,15 @@ validateEnv();
 const app = express();
 const port = process.env.PORT || 3000;
 
+// API routes must come BEFORE static files and catch-all
+photoRoutes(app);
+
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/styles', express.static(path.join(__dirname, 'public/styles')));
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
-// Use the photo routes
-photoRoutes(app);
-
-// Catch-all route to serve the main index.html file
+// Catch-all route to serve the main index.html file (must be last)
 app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
