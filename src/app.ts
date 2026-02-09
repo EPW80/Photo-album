@@ -21,16 +21,16 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Serve static files from the public directory
-app.use(express.static(path.join(__dirname, '../public')));
-app.use('/styles', express.static(path.join(__dirname, '../public/styles')));
-app.use('/images', express.static(path.join(__dirname, '../public/images')));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/styles', express.static(path.join(__dirname, 'public/styles')));
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 // Use the photo routes
 photoRoutes(app);
 
 // Catch-all route to serve the main index.html file
 app.get('*', (_req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 // Error handling middleware (must be last)

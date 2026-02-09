@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc && npm run build:css && npm run copy-public",
     "build:css": "postcss src/styles/tailwind.css -o dist/styles/tailwind.css",
-    "copy-public": "copyfiles -u 1 public/**/* dist/public",
+    "copy-public": "copyfiles 'public/**/*' dist/",
     "start": "node dist/app.js",
     "start:dev": "ts-node src/app.ts",
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'npm run build && node dist/app.js'",
