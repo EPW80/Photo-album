@@ -3,11 +3,9 @@ services:
     name: photo-album
     runtime: node
     plan: free
-    buildCommand: npm install && npm run build
+    buildCommand: npm ci && npm run build
     startCommand: npm start
     healthCheckPath: /photos
     envVars:
       - key: NODE_ENV
         value: production
-      - key: NODE_VERSION
-        value: 20
